@@ -13,4 +13,8 @@ public class Order {
         this.amount = amount;
         this.email = email;
     }
+
+    public String getEmail() {
+        return email;
+    }
 }
