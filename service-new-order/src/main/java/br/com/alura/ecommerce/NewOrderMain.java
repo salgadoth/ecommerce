@@ -12,7 +12,7 @@ public class NewOrderMain {
             var email = Math.random() + "@email.com";
             for (var i = 0; i < 10; i++) {
                 var orderId = UUID.randomUUID().toString();
-                var amount = new BigDecimal(Math.random() * 5000 + 1);
+                var amount = BigDecimal.valueOf(Math.random() * 5000 + 1);
 
                 var id = new CorrelationId(NewOrderMain.class.getSimpleName());
                 var order = new Order(orderId, amount, email);

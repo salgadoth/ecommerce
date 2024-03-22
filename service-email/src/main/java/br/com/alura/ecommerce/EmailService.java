@@ -1,15 +1,11 @@
 package br.com.alura.ecommerce;
 
-import br.com.alura.ecommerce.consumer.KafkaService;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
-
-import java.util.Map;
-import java.util.concurrent.ExecutionException;
 
 public class EmailService implements ConsumerService<String> {
 
-    public static void main(String[] args) throws ExecutionException, InterruptedException {
-        new ServiceProvider().run(EmailService::new);
+    public static void main(String[] args) {
+        new ServiceRunner(EmailService::new).start(5);
     }
 
     public String getConsumerGroup(){
