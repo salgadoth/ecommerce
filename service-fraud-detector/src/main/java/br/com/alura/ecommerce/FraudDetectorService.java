@@ -29,6 +29,7 @@ public class FraudDetectorService {
         System.out.println(record.value());
         System.out.println(record.partition());
         System.out.println(record.offset());
+
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
